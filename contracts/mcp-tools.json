@@ -1,0 +1,74 @@
+[
+  {
+    "annotations": {
+      "destructiveHint": false,
+      "openWorldHint": true,
+      "readOnlyHint": true
+    },
+    "inputSchema": {
+      "additionalProperties": false,
+      "properties": {
+        "arguments": {
+          "additionalProperties": {},
+          "propertyNames": {
+            "type": "string"
+          },
+          "type": "object"
+        },
+        "command": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": ["command"],
+      "type": "object"
+    },
+    "name": "meet_read"
+  },
+  {
+    "annotations": {
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": false,
+      "readOnlyHint": true
+    },
+    "inputSchema": {
+      "additionalProperties": false,
+      "properties": {
+        "query": {
+          "type": "string"
+        }
+      },
+      "required": [],
+      "type": "object"
+    },
+    "name": "meet_tools_search"
+  },
+  {
+    "annotations": {
+      "destructiveHint": true,
+      "idempotentHint": false,
+      "openWorldHint": true,
+      "readOnlyHint": false
+    },
+    "inputSchema": {
+      "additionalProperties": false,
+      "properties": {
+        "arguments": {
+          "additionalProperties": {},
+          "propertyNames": {
+            "type": "string"
+          },
+          "type": "object"
+        },
+        "command": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": ["command"],
+      "type": "object"
+    },
+    "name": "meet_write"
+  }
+]
